@@ -1,6 +1,7 @@
 const express = require('express');
 const { idempotencyMiddleware } = require('../middleware/idempotency');
 const ExpenseController = require('../controllers/expenseController');
+const ExpenseService = require('../services/ExpenseService');
 
 const expenseService = new ExpenseService();
 const expenseController = new ExpenseController(expenseService);
