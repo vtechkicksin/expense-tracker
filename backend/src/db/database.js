@@ -2,15 +2,15 @@ const { Pool } = require('pg');
 
 // Database connection pool
 const pool = new Pool({
-  host: process.env.DB_HOST || 'localhost',
-  port: process.env.DB_PORT || 5432,
-  database: process.env.DB_NAME || 'expense_tracker',
-  user: process.env.DB_USER || 'sandeepkumar',
-  password: process.env.DB_PASSWORD,
-  max: 20, // Maximum number of clients in pool
+  connectionString: process.env.DATABASE_URL,
+  ssl: process.env.NODE_ENV === 'production'
+    ? { rejectUnauthorized: false }
+    : false,
+  max: 20,
   idleTimeoutMillis: 30000,
   connectionTimeoutMillis: 2000,
 });
+
 
 // Test connection on startup
 pool.on('connect', () => {
