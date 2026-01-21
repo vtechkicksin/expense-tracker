@@ -1,5 +1,5 @@
 import React from 'react';
-import './ExpenseFilters.css';
+import './ExpenseFilter.css';
 
 const CATEGORIES = [
   { value: '', label: 'All Categories' },

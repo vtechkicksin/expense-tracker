@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import ExpenseForm from './components/ExpenseForm';
 import ExpenseList from './components/ExpenseList';
-import ExpenseFilters from './components/ExpenseFilters';
+import ExpenseFilters from './components/ExpenseFilter';
 import './App.css';
 
 // Configure React Query client
