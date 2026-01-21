@@ -2,9 +2,9 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
-const expenseRoutes = require('./routes/expenses');
-const { errorHandler } = require('./middleware/errorHandler');
-const { initializeDb } = require('./db/database');
+const expenseRoutes = require('./routes/expense.js');
+const { errorHandler } = require('./middleware/errorHandler.js');
+const { initializeDb } = require('./db/database.js');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
