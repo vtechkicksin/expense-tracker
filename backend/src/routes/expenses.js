@@ -1,6 +1,6 @@
 const express = require('express');
 const { body, query, validationResult } = require('express-validator');
-const ExpenseService = require('../services/expenseService');
+const ExpenseService = require('../services/ExpenseService');
 const { idempotencyMiddleware } = require('../middleware/idempotency');
 
 const router = express.Router();
